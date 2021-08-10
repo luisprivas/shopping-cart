@@ -165,6 +165,7 @@ const Products = (props) => {
   // TODO: implement the restockProducts function
   const restockProducts = (url) => {
     doFetch(url);
+    // Credits to user ZER0: https://stackoverflow.com/questions/9885821/copying-of-an-array-of-objects-to-another-array-without-object-reference-in-java
     var tempArray = JSON.parse(JSON.stringify(data));
     let restock = tempArray.map((item) => {
       return item;
